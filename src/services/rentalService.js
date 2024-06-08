@@ -49,5 +49,9 @@ exports.calculateTotal = ({ pickUpDate, returnDate, discount, vehicle, collision
         breakdown.push({ charge: 'Rental Tax', unit: 1, rate: taxAmount, total: taxAmount });
     }
 
+    if(total < 0){
+        total = 0;
+    }
+
     return { total, breakdown };
 };
