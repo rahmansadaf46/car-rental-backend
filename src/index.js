@@ -2,7 +2,7 @@
 // src/index.js
 const express = require('express');
 const dotenv = require('dotenv');
-const cors = require('cors');  // Import the CORS middleware
+const cors = require('cors');
 const rentalRoutes = require('./routes/rentalRoutes');
 
 dotenv.config();
