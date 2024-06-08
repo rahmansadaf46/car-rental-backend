@@ -35,18 +35,18 @@ exports.calculateTotal = ({ pickUpDate, returnDate, discount, vehicle, collision
 
     if (collisionDamageWaiver) {
         total += 9;
-        breakdown.push({ charge: 'Collision Damage Waiver', unit: null, rate: 9, total: 9 });
+        breakdown.push({ charge: 'Collision Damage Waiver', unit: 1, rate: 9, total: 9 });
     }
 
     if (liabilityInsurance) {
         total += 15;
-        breakdown.push({ charge: 'Liability Insurance', unit: null, rate: 15, total: 15 });
+        breakdown.push({ charge: 'Liability Insurance', unit: 1, rate: 15, total: 15 });
     }
 
     if (rentalTax) {
         const taxAmount = total * 0.1;
         total += taxAmount;
-        breakdown.push({ charge: 'Rental Tax', unit: null, rate: taxAmount, total: taxAmount });
+        breakdown.push({ charge: 'Rental Tax', unit: 1, rate: taxAmount, total: taxAmount });
     }
 
     return { total, breakdown };
