@@ -17,3 +17,5 @@ This project contains the backend logic for a car rental service. The primary fu
    ```sh
    git clone https://github.com/rahmansadaf46/car-rental-backend.git
    cd car-rental-backend
+   npm install
+   npm run dev
